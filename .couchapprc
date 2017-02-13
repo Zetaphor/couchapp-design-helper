@@ -1,0 +1,7 @@
+{
+  "env" : {
+    "default" : {
+      "db" : "http://admin:root@localhost:5984/app"
+    }
+  }
+}
