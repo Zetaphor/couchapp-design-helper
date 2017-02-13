@@ -83,11 +83,6 @@ def fullTextJsToJson(fileDir, jsFileName, outputPath):
     with open(outputPath + '/' + jsFileName + 'on', 'w') as jsonFile:
         jsonFile.write(json.dumps({ "index": minified }))
 
-    return {
-        'content': jsFileContent,
-        'filename': (fileDir + '/' + jsFileName)
-    }
-
 def minifyJs(fileDir, jsFileName, outputPath):
     with open(fileDir + '/' + jsFileName, 'r+') as jsFile:
         jsFileContent = jsFile.read()
@@ -95,8 +90,3 @@ def minifyJs(fileDir, jsFileName, outputPath):
 
     with open(outputPath + '/' + jsFileName, 'w') as newJsFile:
         newJsFile.write(minified)
-
-    return {
-        'content': jsFileContent,
-        'filename': (fileDir + '/' + jsFileName)
-    }
